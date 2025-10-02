@@ -60,10 +60,10 @@ Before submitting a formula, please test it locally:
 
 ```bash
 # Test the formula installation
-brew install --build-from-source ./Formula/<formula-name>.rb
+brew install --build-from-source ./Formula/<formula-name>
 
 # Run audit to check for common issues
-brew audit --strict --online ./Formula/<formula-name>.rb
+brew audit --strict --online ./Formula/<formula-name>
 
 # Test uninstallation
 brew uninstall <formula-name>
