@@ -5,50 +5,50 @@
 class Dr < Formula
   desc "DataRobot command-line interface."
   homepage "https://github.com/datarobot-oss/cli"
-  version "0.0.11"
+  version "0.0.12"
   license "Apache-2.0"
 
   depends_on "go" => :build
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/datarobot-oss/cli/releases/download/v0.0.11/dr_v0.0.11_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "40e58686f4d504119f988460833f8a4a43f2d1471736a4db549948c46a11666c"
+      url "https://github.com/datarobot-oss/cli/archive/refs/tags/v0.0.12.tar.gz", using: CurlDownloadStrategy
+      sha256 "950d3bef620ee88cc44e6b305a7a0e71f49d3baf1bc448f764baa8938e66bd73"
 
       def install
-        system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/datarobot/cli/internal/version.Version=v0.0.11 -X github.com/datarobot/cli/internal/version.GitCommit=24d4b83 -X github.com/datarobot/cli/internal/version.BuildDate=2025-10-02T20:56:24Z"), "-o", bin/"dr"
+        system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/datarobot/cli/internal/version.Version=v0.0.12 -X github.com/datarobot/cli/internal/version.GitCommit=54b95a7 -X github.com/datarobot/cli/internal/version.BuildDate=2025-10-02T21:06:44Z")
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/datarobot-oss/cli/releases/download/v0.0.11/dr_v0.0.11_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "909daa927d70797c1d914b6de1bad6149d8daddb5f0628d224c0e88957157b23"
+      url "https://github.com/datarobot-oss/cli/archive/refs/tags/v0.0.12.tar.gz", using: CurlDownloadStrategy
+      sha256 "9247c98329295f24e4f67e7b307a624e99ef08fce87f3d4ab78a1350ca1e43c5"
 
       def install
-        system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/datarobot/cli/internal/version.Version=v0.0.11 -X github.com/datarobot/cli/internal/version.GitCommit=24d4b83 -X github.com/datarobot/cli/internal/version.BuildDate=2025-10-02T20:56:24Z"), "-o", bin/"dr"
+        system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/datarobot/cli/internal/version.Version=v0.0.12 -X github.com/datarobot/cli/internal/version.GitCommit=54b95a7 -X github.com/datarobot/cli/internal/version.BuildDate=2025-10-02T21:06:44Z")
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/datarobot-oss/cli/releases/download/v0.0.11/dr_v0.0.11_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ff2ac458c0fa431d04af415d477907b90eb69315b7f8584021c19a41da706c09"
+      url "https://github.com/datarobot-oss/cli/archive/refs/tags/v0.0.12.tar.gz", using: CurlDownloadStrategy
+      sha256 "f03e4865beb2b10bae969a98f3504c33953105570f97d6b65528be16da8623a0"
       def install
-        system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/datarobot/cli/internal/version.Version=v0.0.11 -X github.com/datarobot/cli/internal/version.GitCommit=24d4b83 -X github.com/datarobot/cli/internal/version.BuildDate=2025-10-02T20:56:24Z"), "-o", bin/"dr"
+        system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/datarobot/cli/internal/version.Version=v0.0.12 -X github.com/datarobot/cli/internal/version.GitCommit=54b95a7 -X github.com/datarobot/cli/internal/version.BuildDate=2025-10-02T21:06:44Z")
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/datarobot-oss/cli/releases/download/v0.0.11/dr_v0.0.11_Linux_armv6.tar.gz", using: CurlDownloadStrategy
-      sha256 "bde0745c15f2efda81d7f6e3d00ae9d3273d8ccf242059c6a5d76b6c1e977081"
+      url "https://github.com/datarobot-oss/cli/archive/refs/tags/v0.0.12.tar.gz", using: CurlDownloadStrategy
+      sha256 "f12e3e73bdfbcfc1d52f77f0ecfa5d9326004448491a9d6cad86ac5d23ce562d"
       def install
-        system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/datarobot/cli/internal/version.Version=v0.0.11 -X github.com/datarobot/cli/internal/version.GitCommit=24d4b83 -X github.com/datarobot/cli/internal/version.BuildDate=2025-10-02T20:56:24Z"), "-o", bin/"dr"
+        system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/datarobot/cli/internal/version.Version=v0.0.12 -X github.com/datarobot/cli/internal/version.GitCommit=54b95a7 -X github.com/datarobot/cli/internal/version.BuildDate=2025-10-02T21:06:44Z")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/datarobot-oss/cli/releases/download/v0.0.11/dr_v0.0.11_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "bfe112a19f7cb2654addaa84afd24dd05de016d7673f3896424a74d034900bdf"
+      url "https://github.com/datarobot-oss/cli/archive/refs/tags/v0.0.12.tar.gz", using: CurlDownloadStrategy
+      sha256 "ba97b2315dc28e39a678103fa4d39596a9e729ea58ccaba6b79429571cade496"
       def install
-        system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/datarobot/cli/internal/version.Version=v0.0.11 -X github.com/datarobot/cli/internal/version.GitCommit=24d4b83 -X github.com/datarobot/cli/internal/version.BuildDate=2025-10-02T20:56:24Z"), "-o", bin/"dr"
+        system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/datarobot/cli/internal/version.Version=v0.0.12 -X github.com/datarobot/cli/internal/version.GitCommit=54b95a7 -X github.com/datarobot/cli/internal/version.BuildDate=2025-10-02T21:06:44Z")
       end
     end
   end
