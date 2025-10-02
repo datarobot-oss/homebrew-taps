@@ -20,7 +20,7 @@ brew install datarobot-oss/taps/example-tool
 
 Currently, this tap contains the following formulas:
 
-- *No formulas available yet*
+- dr - The DataRobot CLI
 
 Note: There is an `example-formula.rb.template` file in the `Formula/` directory that serves as a template for creating new formulas. Remove this template when adding your first real formula.
 
