@@ -4,66 +4,60 @@ A Homebrew tap repository for DataRobot's open source software packages.
 
 ## Installation
 
-You can install any formula from this tap using:
+You can install any cask from this tap using:
 
 ```bash
-brew install datarobot-oss/taps/<formula>
+brew install datarobot-oss/taps/<cask>
 ```
 
-For example, if there was a formula called `example-tool`, you would install it with:
+For example, if there was a cask called `example-tool`, you would install it with:
 
 ```bash
 brew install datarobot-oss/taps/example-tool
 ```
 
-## Available Formulas
+## Available Casks
 
 Currently, this tap contains the following formulas:
 
-- dr - The DataRobot CLI
+- dr-cli - The DataRobot CLI
 
-Note: There is an `example-formula.rb.template` file in the `Formula/` directory that serves as a template for creating new formulas. Remove this template when adding your first real formula.
+## For Developers: Adding New Casks
 
-## For Developers: Adding New Formulas
+This tap follows the standard Homebrew tap guidelines. To add a new cask:
 
-This tap follows the standard Homebrew tap guidelines. To add a new formula:
-
-1. **Create a new formula file** in the `Formula/` directory
-2. **Name the file** using the pattern `<formula-name>.rb`
+1. **Create a new Cask file** in the `Cask/` directory
+2. **Name the file** using the pattern `<cask-name>.rb`
 3. **Follow Homebrew formula conventions** - see the [Adding Software to Homebrew guide](https://docs.brew.sh/Adding-Software-to-Homebrew)
 
-### Quick Start for New Formulas
+### Quick Start for New Casks
 
-1. **Use the provided template**: Start with the `Formula/example-formula.rb.template` file as a reference
-
-2. Use `brew create <url>` to generate a formula template:
+1. Use `brew create <url>` to generate a cask template:
    ```bash
    brew create https://github.com/your-org/your-software/archive/v1.0.0.tar.gz
    ```
 
-3. Move the generated formula to this tap's `Formula/` directory
+2. Move the generated cask to this tap's `Casks/` directory
 
-4. Edit the formula to follow DataRobot standards and test thoroughly
+3. Edit the cask to follow DataRobot standards and test thoroughly
 
-5. Submit a pull request with your new formula
+4. Submit a pull request with your new cask
 
 ### Resources
 
 - [How to Create and Maintain a Tap](https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap)
 - [Adding Software to Homebrew](https://docs.brew.sh/Adding-Software-to-Homebrew)
-- [Formula Cookbook](https://docs.brew.sh/Formula-Cookbook)
-- [Homebrew Acceptable Formulae](https://docs.brew.sh/Acceptable-Formulae)
 
 ## Testing
 
-Before submitting a formula, please test it locally:
+Before submitting a cask, please test it locally:
 
 ```bash
 # Test the formula installation
-brew install --build-from-source ./Formula/<formula-name>
+brew install --build-from-source ./Casks/<formula-name>
 
 # Run audit to check for common issues
-brew audit --strict --online ./Formula/<formula-name>
+brew audit --strict --online ./Casks/<formula-name>
 
 # Test uninstallation
 brew uninstall <formula-name>
