@@ -22,6 +22,8 @@ Currently, this tap contains the following formulas:
 
 - *No formulas available yet*
 
+Note: There is an `example-formula.rb.template` file in the `Formula/` directory that serves as a template for creating new formulas. Remove this template when adding your first real formula.
+
 ## For Developers: Adding New Formulas
 
 This tap follows the standard Homebrew tap guidelines. To add a new formula:
@@ -32,16 +34,18 @@ This tap follows the standard Homebrew tap guidelines. To add a new formula:
 
 ### Quick Start for New Formulas
 
-1. Use `brew create <url>` to generate a formula template:
+1. **Use the provided template**: Start with the `Formula/example-formula.rb.template` file as a reference
+
+2. Use `brew create <url>` to generate a formula template:
    ```bash
    brew create https://github.com/your-org/your-software/archive/v1.0.0.tar.gz
    ```
 
-2. Move the generated formula to this tap's `Formula/` directory
+3. Move the generated formula to this tap's `Formula/` directory
 
-3. Edit the formula to follow DataRobot standards and test thoroughly
+4. Edit the formula to follow DataRobot standards and test thoroughly
 
-4. Submit a pull request with your new formula
+5. Submit a pull request with your new formula
 
 ### Resources
 
