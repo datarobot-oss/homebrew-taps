@@ -3,7 +3,7 @@ cask "dr-cli" do
   name "dr-cli"
   desc "DataRobot command-line interface."
   homepage "https://www.datarobot.com"
-  version "0.2.11"
+  version "0.2.12"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "dr-cli" do
     on_intel do
       url "https://github.com/datarobot-oss/cli/releases/download/v#{version}/dr_v#{version}_Darwin_x86_64.tar.gz",
         verified: "github.com/datarobot-oss/cli/"
-      sha256 "284e007d7d7ca8cae43811a6f179182d32fd959d6577e1551375f6987249a548"
+      sha256 "78b024660aa4bf098d4e65a26be7f2940fb03fff1e2343ece1c323d86fcc231c"
     end
     on_arm do
       url "https://github.com/datarobot-oss/cli/releases/download/v#{version}/dr_v#{version}_Darwin_arm64.tar.gz",
         verified: "github.com/datarobot-oss/cli/"
-      sha256 "e791d6ac33584d41d71ef6ca74a009da45c14be5693f7e3749891b390de04a6f"
+      sha256 "eedc8360eee1bb4a4a85546e54a414a5b7ea99dacf461be9898bb7d42b167825"
     end
   end
 
@@ -28,12 +28,12 @@ cask "dr-cli" do
     on_intel do
       url "https://github.com/datarobot-oss/cli/releases/download/v#{version}/dr_v#{version}_Linux_x86_64.tar.gz",
         verified: "github.com/datarobot-oss/cli/"
-      sha256 "4c9acd3b61013f9b7060e79dd6f14367c06de9749b28b8676c13b6c0aca568fb"
+      sha256 "bc922228f33a69a5a698e6dca475205f99997fe66c68876685c0a11996f6413c"
     end
     on_arm do
       url "https://github.com/datarobot-oss/cli/releases/download/v#{version}/dr_v#{version}_Linux_arm64.tar.gz",
         verified: "github.com/datarobot-oss/cli/"
-      sha256 "e34847ebc575c982c94a8206d33ef50da0f72d661854fee829d3826b27fbad6e"
+      sha256 "1c1034b0a6ddb6aaeb84cb8756801f1475f378da0b55e7763b9783a19fa1a1a3"
     end
   end
 
