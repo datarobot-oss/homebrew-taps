@@ -3,7 +3,7 @@ cask "dr-cli" do
   name "dr-cli"
   desc "DataRobot command-line interface."
   homepage "https://www.datarobot.com"
-  version "0.2.53"
+  version "0.2.54"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "dr-cli" do
     on_intel do
       url "https://github.com/datarobot-oss/cli/releases/download/v#{version}/dr_v#{version}_Darwin_x86_64.tar.gz",
         verified: "github.com/datarobot-oss/cli/"
-      sha256 "a6cd7a61a5c130c7b2bf02156f5deb2898c41d9a37744dc93890f0dbf0bfc322"
+      sha256 "49a6ea772d59b2f9e3814d9b9c8728f27a22f941c84dd31244ed6ecc10977771"
     end
     on_arm do
       url "https://github.com/datarobot-oss/cli/releases/download/v#{version}/dr_v#{version}_Darwin_arm64.tar.gz",
         verified: "github.com/datarobot-oss/cli/"
-      sha256 "ec2da8b59f026d85127e1f8bff8f041ca1346f2f9f111e83febcb871e9bbdc4e"
+      sha256 "643cbd637fd0dd5253d13a486f65448ada7c27513b01f7c6f374e2cd5cacb81c"
     end
   end
 
@@ -28,18 +28,26 @@ cask "dr-cli" do
     on_intel do
       url "https://github.com/datarobot-oss/cli/releases/download/v#{version}/dr_v#{version}_Linux_x86_64.tar.gz",
         verified: "github.com/datarobot-oss/cli/"
-      sha256 "6cfaf714836ee02efd2be3646c610daddd3ce7a417acfc183f4d5d735df5281a"
+      sha256 "ace567707d7689bcfe79e5f4916715afefbd8178fdc731e9a63817578aa5d92c"
     end
     on_arm do
       url "https://github.com/datarobot-oss/cli/releases/download/v#{version}/dr_v#{version}_Linux_arm64.tar.gz",
         verified: "github.com/datarobot-oss/cli/"
-      sha256 "9373fd95f2e82af8f0ed4f1a18ca220d8fdb0d683101d9e8b9adb3fd244442de"
+      sha256 "859fb1e4aecbe0827df3e923e57f86d1d65f798c70b6c0a1a35662e0395346ed"
     end
   end
 
   postflight do
     if OS.mac?
       system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/dr"]
+      system_command "/bin/ln", args: ["-sf", "#{HOMEBREW_PREFIX}/bin/dr", "#{HOMEBREW_PREFIX}/bin/datarobot"]
+    end
+  end
+
+  uninstall_postflight do
+    if OS.mac?
+      symlink = Pathname.new("#{HOMEBREW_PREFIX}/bin/datarobot")
+      symlink.delete if symlink.symlink?
     end
   end
 
