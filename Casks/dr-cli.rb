@@ -4,21 +4,21 @@ cask "dr-cli" do
 
   on_macos do
     on_arm do
-      sha256 "0b4379b9d7aac3bcdb564b60b947ddd140be1794a1c5f9fb0c40cefcef7374e6"
+      sha256 "daf0541d70531527c999becfc820688d7558130d195af4fdc8f4d73fd91a7c2a"
       url "https://github.com/datarobot-oss/cli/releases/download/v#{version}/dr_v#{version}_Darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "edb19819a1dc9d89cc4fc6b2a7d3819205131e3c1ef8d6a363fc62d72679e6ce"
+      sha256 "21d777bf3bfbd0755cd00a8b68bc2870adc9146a524996a6b9c7311ece992485"
       url "https://github.com/datarobot-oss/cli/releases/download/v#{version}/dr_v#{version}_Darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "6bf1dde2e6fa142e8514fee6ec2cf379de53bd3e863afd272988690f17bcf53a"
+      sha256 "4b37b6893dae924ae7f12d5a7a6df31f09dee1b4310814ed815a5d981ef2957f"
       url "https://github.com/datarobot-oss/cli/releases/download/v#{version}/dr_v#{version}_Linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "a7bee5a4dbbaaf7e7567ea2a5821f81ada78b6cd26e0a40157b6deff535b5222"
+      sha256 "0a794f6b7d13e08c142f60c2b80b8b26dcf87377a98a3ee5680108a936f36ea9"
       url "https://github.com/datarobot-oss/cli/releases/download/v#{version}/dr_v#{version}_Linux_x86_64.tar.gz"
     end
   end
